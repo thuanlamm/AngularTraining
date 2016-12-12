@@ -1,0 +1,6 @@
+[
+    {"name": "one",   "makeScope": false, "price": 9},
+    {"name": "two",   "makeScope": true, "price": 7},
+    {"name": "three", "makeScope": false, "price": 6},
+    {"name": "four",  "makeScope": false, "price": 4}
+]

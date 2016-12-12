@@ -1,0 +1,54 @@
+<h1>Hello, this is the first.html</h1>
+
+<div ng-controller="usnController">
+    <h1 ng-bind="errorMessage"></h1>
+    <br>
+
+    <div>
+
+     <!--    <label for="mySelect">Order by: </label>
+        <select name="repeatSelect" id="repeatSelect" ng-model="myOrder.selected">
+            <option ng-repeat="orderBy in orderings" value="{{orderBy}}">{{orderBy}}</option>
+        </select>
+ -->
+        <ui-select search-enabled=false ng-model="myOrder.selected">
+            <ui-select-match placeholder="Order by...">
+                <span ng-bind = "$select.selected"></span>
+            </ui-select-match>
+            <ui-select-choices repeat="orderBy in orderings">
+                <span ng-bind="orderBy"></span>
+            </ui-select-choices>
+        </ui-select>
+
+    </div>
+
+<!--     <div ng-show="myOrder == 'name'">
+        <div><strong>Name</strong></div>
+        <div ng-click="myOrder = 'price'">Price</div>
+    </div>
+    <div ng-show="myOrder == 'price'">
+        <div ng-click="myOrder = 'name'">Name</div>
+        <div><strong>Price</strong></div>
+    </div>
+    <br><br> -->
+
+    <div ng-click="templateArray.push( {name:'new', makeScope:true, price:11})">
+        new widget
+    </div>
+
+    <button ng-click="getHttpResult()">load templateArray to $scope.templateArray</button>
+
+    <button ng-click="initiateNewResult()">load array from provider two</button>
+
+    <div ng-repeat="eachTemplate in templateArray | orderBy:myOrder.selected" ng-init="bgColor = getRandomColor()">
+        <div style="background-color: {{bgColor}}">
+            <div>index {{$index}}</div>
+            <div ng-if="eachTemplate.makeScope">
+                <div usn-make-scope usn-template-file></div>
+            </div>
+            <div ng-if="!eachTemplate.makeScope">
+                <div usn-template-file></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<!-- <div usn-template-string></div>
+<div>
+    <div  ng-click="test = !test">click me 1  {{test}} </div>
+    <input ng-blur="blurHandler($event)" ng-model="inputCssClass"/>
+    <h1 style="color: {{inputCssClass}}" ng-init="test = false" ng-hide="test" usn-change-color> test1 </h1>
+</div>
+<div usn-make-scope>
+    <div ng-click="test = !test">click me 2</div>
+    <input ng-blur="blurHandler($event)" ng-init="myvar = demo-color2" ng-binh="myvar"/>
+    <h1 ng-class="inputCssClass" ng-init="test = false"  ng-hide="test" usn-change-color> test2 </h1>
+</div> -->
+<div>
+    <div ng-click="templateArray.splice($index, 1)">Remove me {{$index}} {{eachTemplate.name | ourFilter:'xx'}}</div>
+    <div>Price: {{eachTemplate.price | currency}}</div>
+    <div ng-click="test = !test">click me</div>
+    <input ng-blur="blurHandler($event)" ng-model="inputCssClass"/>
+    <h1 style="color: {{inputCssClass}}" ng-init="test = false" ng-hide="test"> test </h1>
+</div>
