@@ -1,4 +1,6 @@
-angular.module('usnApp').controller('usnController', ['$scope', 'orderByGroup', 'httpProvider', function($scope, orderByGroup, httpProvider) {
+angular.module('usnApp').controller('usnController',
+['$scope', 'orderByGroup', 'httpProvider',
+function($scope, orderByGroup, httpProvider) {
     // httpProvider.then(function(httpResponse){
     //     console.log('successed', httpResponse);
     //     $scope.templateArray = httpResponse.data;
@@ -6,7 +8,6 @@ angular.module('usnApp').controller('usnController', ['$scope', 'orderByGroup', 
     //     console.log('failed', httpResponse);
     //     $scope.errorMessage = 'http error';
     // });
-
 
     $scope.getHttpResult = function() {
         var httpResult = httpProvider.getHttpResult();

@@ -1,6 +1,6 @@
 <h1>Hello, this is the first.html</h1>
 
-<div ng-controller="usnController">
+<div class = "well" ng-controller="usnController" style="padding 10px 10px 10px 10px;">
     <h1 ng-bind="errorMessage"></h1>
     <br>
 
@@ -41,8 +41,9 @@
     <button ng-click="initiateNewResult()">load array from provider two</button>
 
     <div ng-repeat="eachTemplate in templateArray | orderBy:myOrder.selected" ng-init="bgColor = getRandomColor()">
-        <div style="background-color: {{bgColor}}">
+        <div style="background-color: {{bgColor}}; width: {{(eachTemplate.level + 1) * 500}}px;">
             <div>index {{$index}}</div>
+            <div>level {{eachTemplate.level}}</div>
             <div ng-if="eachTemplate.makeScope">
                 <div usn-make-scope usn-template-file></div>
             </div>

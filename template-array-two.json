@@ -1,5 +1,5 @@
 [
-    {"name": "five",   "makeScope": false, "price": 2},
-    {"name": "six",    "makeScope": true,  "price": 6},
-    {"name": "seven",  "makeScope": false, "price": 3}
+    {"name": "five",   "makeScope": false, "price": 2, "level": 0},
+    {"name": "six",    "makeScope": true,  "price": 6, "level": 1},
+    {"name": "seven",  "makeScope": false, "price": 3, "level": 1}
 ]

@@ -9,10 +9,13 @@
     <input ng-blur="blurHandler($event)" ng-init="myvar = demo-color2" ng-binh="myvar"/>
     <h1 ng-class="inputCssClass" ng-init="test = false"  ng-hide="test" usn-change-color> test2 </h1>
 </div> -->
-<div>
+<div id="container">
     <div ng-click="templateArray.splice($index, 1)">Remove me {{$index}} {{eachTemplate.name | ourFilter:'xx'}}</div>
-    <div>Price: {{eachTemplate.price | currency}}</div>
+    <div style="background-color: red; float: left; width: {{(eachTemplate.level + 1) * 50}}px;">a</div>
+    <div class="form-control price" style="float: left; margin-left: {{(level+1)*50}}px">Price: {{eachTemplate.price | currency}}</div>
+    <!-- <div class="form-control price" ng-style="'float': left; 'margin-left': {{(level+1)*50}}px">Price: {{eachTemplate.price | currency}}</div> -->
     <div ng-click="test = !test">click me</div>
     <input ng-blur="blurHandler($event)" ng-model="inputCssClass"/>
     <h1 style="color: {{inputCssClass}}" ng-init="test = false" ng-hide="test"> test </h1>
 </div>
+

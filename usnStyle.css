@@ -8,3 +8,6 @@
     color: blue;
 }
 
+.price {
+    max-width: 250px;
+}
